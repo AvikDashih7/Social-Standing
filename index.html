@@ -194,7 +194,7 @@
           <a href="#founders">About</a>
         </div>
         <div class="r">
-          <a href="#">Sign In</a>
+          <a href="#sign-in" data-open-signin>Sign In</a>
           <a class="btn" href="#contact">
             Book A Consultation<i
               class="fa-solid fa-arrow-right"
@@ -205,6 +205,68 @@
       </div>
     </nav>
     <!-- SITE NAVIGATION: END -->
+
+    <section class="signin-modal" id="sign-in" aria-hidden="true" inert>
+      <div class="signin-backdrop" data-close-signin></div>
+      <div
+        class="signin-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="signin-title"
+        tabindex="-1"
+      >
+        <button
+          class="signin-close"
+          type="button"
+          data-close-signin
+          aria-label="Close sign in"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <a class="signin-logo" href="#" aria-label="Social Standing home">
+          <img src="./images/bnr_logo.png" alt="Social Standing" />
+        </a>
+        <span class="signin-kicker">Welcome back</span>
+        <h2 id="signin-title">Sign in to your account</h2>
+        <p>Access your Social Standing client workspace.</p>
+        <form class="signin-form" id="signin-form">
+          <label>
+            Email address
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="you@lawfirm.com"
+            />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter your password"
+            />
+          </label>
+          <button class="btn" type="submit">
+            Sign In
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+          <p
+            class="signin-feedback"
+            id="signin-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+        <span class="signin-footnote">
+          New to Social Standing?
+          <a href="#">Book a consultation</a>
+        </span>
+      </div>
+    </section>
 
     <main>
       <!-- HERO SECTION: START -->

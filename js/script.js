@@ -2,6 +2,68 @@
    SOCIAL STANDING - MAIN SCRIPT
    ========================================================================== */
 
+/* SIGN IN MODAL */
+(() => {
+  const modal = document.querySelector(".signin-modal");
+  if (!modal) return;
+
+  const dialog = modal.querySelector(".signin-dialog");
+  const form = modal.querySelector("#signin-form");
+  const feedback = modal.querySelector("#signin-feedback");
+  let returnFocus = null;
+
+  function openModal() {
+    returnFocus = document.activeElement;
+    modal.inert = false;
+    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("is-open");
+    document.body.classList.add("signin-open");
+    dialog.focus({ preventScroll: true });
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    modal.inert = true;
+    document.body.classList.remove("signin-open");
+    if (returnFocus && typeof returnFocus.focus === "function") {
+      returnFocus.focus({ preventScroll: true });
+    }
+  }
+
+  document.querySelectorAll("[data-open-signin]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      openModal();
+    });
+  });
+  modal.querySelectorAll("[data-close-signin]").forEach((trigger) => {
+    trigger.addEventListener("click", closeModal);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeModal();
+    if (event.key === "Tab") {
+      const focusable = [...dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled])')];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    feedback.textContent = "Sign in is not connected yet. Please contact your Social Standing representative for account access.";
+  });
+
+  if (window.location.hash === "#sign-in") openModal();
+})();
+
 /* ==========================================================================
    LOADER: START
    ========================================================================== */
