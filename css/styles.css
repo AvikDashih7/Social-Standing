@@ -1529,8 +1529,6 @@ h1 em {
   opacity: 0;
 }
 
-
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -1922,8 +1920,6 @@ h1 em {
   z-index: 2;
 }
 
-
-
 /* SERVICES SECTION: END */
 
 /* PRACTICE AREAS SECTION: START */
@@ -2120,8 +2116,6 @@ h1 em {
 .practice-t7 {
   grid-area: 5 / 4 / 11 / 5;
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   .practice-tile,
@@ -2538,8 +2532,6 @@ h1 em {
   pointer-events: none;
 }
 
-
-
 @media (prefers-reduced-motion: reduce) {
   .founders-image,
   .founders-copy,
@@ -2917,8 +2909,6 @@ h1 em {
   background: #18e4df;
 }
 
-
-
 @media (prefers-reduced-motion: reduce) {
   .industry-wrap,
   .industry-wrap * {
@@ -3131,10 +3121,6 @@ h1 em {
 .process-step.active .process-bar {
   width: 100%;
 }
-
-
-
-
 
 @media (prefers-reduced-motion: reduce) {
   .process-step,
@@ -3415,8 +3401,6 @@ h1 em {
   font-size: 12px;
   text-align: center;
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   .showcase-card,
@@ -4453,12 +4437,6 @@ body.signin-open {
   font-weight: 400;
   padding-top: 2px;
 }
-
-
-
-
-
-
 
 @media (prefers-reduced-motion: reduce) {
   .contact-section *,

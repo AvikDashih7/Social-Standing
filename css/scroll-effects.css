@@ -144,7 +144,6 @@
 
 /* Small screens: lighter page, no floating shapes */
 
-
 @media (prefers-reduced-motion: reduce) {
   .fx3d,
   .ss-progress {

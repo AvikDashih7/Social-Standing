@@ -356,7 +356,9 @@ img {
     background: #f7f8ff;
     color: #172344;
     cursor: pointer;
-    font: 600 14px Inter, sans-serif;
+    font:
+      600 14px Inter,
+      sans-serif;
   }
 
   .nav-menu-toggle > span:first-child {
@@ -380,7 +382,9 @@ img {
     height: 2px;
     border-radius: 2px;
     background: #2454ff;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   .site-nav.is-menu-open .nav-menu-icon i:first-child {
@@ -467,7 +471,6 @@ img {
     height: clamp(230px, 62vw, 340px);
     margin: 0 8px 12px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1137,4 +1140,3 @@ img {
     padding-left: 14px;
   }
 }
-
